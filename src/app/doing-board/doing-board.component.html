@@ -1,0 +1,9 @@
+<div class="board-heading">Start doing</div>
+<input [(ngModel)]="title">
+<button (click)="addItem()">Add</button>
+
+<div class="card-container card-board">
+  <ng-container *ngFor="let lst of list">
+    <app-item-card [color]="'#00bcd4'" [title]=lst></app-item-card>
+  </ng-container>
+</div>
