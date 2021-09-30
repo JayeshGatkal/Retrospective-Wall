@@ -1,16 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
-
 .card-container {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card-board {
-  width: 70%;
-}
-
-.board-heading{
+.board-heading {
   text-align: center;
   margin: 10px;
+}
+
+.fa-plus-circle:before {
+  content: "\f055";
+  color: #77d332;
 }

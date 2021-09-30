@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { CardService } from '../card.service';
+import { Component, OnInit } from "@angular/core";
+import { CardService } from "../card.service";
 
 @Component({
-  selector: 'app-action-items-board',
-  templateUrl: './action-items-board.component.html',
-  styleUrls: ['./action-items-board.component.css']
+  selector: "app-action-items-board",
+  templateUrl: "./action-items-board.component.html",
+  styleUrls: ["./action-items-board.component.css"],
 })
 export class ActionItemsBoardComponent implements OnInit {
   public list = [];
@@ -17,11 +17,11 @@ export class ActionItemsBoardComponent implements OnInit {
   }
 
   addItem() {
-    this.cardService.addActionItem(this.title);
-    this.title = "";
+    if (this.title) {
+      this.cardService.addActionItem(this.title);
+      this.title = "";
+    }
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

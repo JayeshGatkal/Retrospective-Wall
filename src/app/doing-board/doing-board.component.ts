@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { CardService } from '../card.service';
+import { Component, OnInit } from "@angular/core";
+import { CardService } from "../card.service";
 
 @Component({
-  selector: 'app-doing-board',
-  templateUrl: './doing-board.component.html',
-  styleUrls: ['./doing-board.component.css']
+  selector: "app-doing-board",
+  templateUrl: "./doing-board.component.html",
+  styleUrls: ["./doing-board.component.css"],
 })
 export class DoingBoardComponent implements OnInit {
   public list = [];
@@ -17,11 +17,11 @@ export class DoingBoardComponent implements OnInit {
   }
 
   addItem() {
-    this.cardService.addDoingItem(this.title);
-    this.title = "";
+    if (this.title) {
+      this.cardService.addDoingItem(this.title);
+      this.title = "";
+    }
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

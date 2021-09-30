@@ -1,6 +1,7 @@
-<div class="board-heading">Action Items</div>
+<div class="board-heading">Action Items
+  <span (click)="addItem()"><i class="fa fa-plus-circle"></i></span>
+</div>
 <input [(ngModel)]="title">
-<button (click)="addItem()">Add</button>
 
 <div class="card-container card-board">
   <ng-container *ngFor="let lst of list">

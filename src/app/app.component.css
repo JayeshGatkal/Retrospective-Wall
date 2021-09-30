@@ -1,6 +1,8 @@
 .container {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 

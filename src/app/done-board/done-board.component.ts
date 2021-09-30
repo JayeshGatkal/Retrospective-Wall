@@ -17,8 +17,10 @@ export class DoneBoardComponent implements OnInit {
   }
 
   addItem() {
-    this.cardService.addDoneItem(this.title);
-    this.title = "";
+    if (this.title) {
+      this.cardService.addDoneItem(this.title);
+      this.title = "";
+    }
   }
 
   ngOnInit() {}

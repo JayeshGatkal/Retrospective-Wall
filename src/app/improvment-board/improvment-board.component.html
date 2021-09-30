@@ -1,9 +1,13 @@
-<p>What can be improved</p>
-<input [(ngModel)]="title">
-<button (click)="addItem()">Add</button>
+<div class="board-heading">
+  What can be improved
+
+  <span (click)="addItem()"><i class="fa fa-plus-circle"></i></span>
+</div>
+
+<input [(ngModel)]="title" />
 
 <div class="card-container card-board">
   <ng-container *ngFor="let lst of list">
-    <app-item-card [color]="'#00bcd4'" [title]=lst></app-item-card>
+    <app-item-card [color]="'#CDFFFC'" [title]="lst"></app-item-card>
   </ng-container>
 </div>

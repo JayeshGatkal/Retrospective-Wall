@@ -1,9 +1,10 @@
-<div class="board-heading">What went well</div>
+<div class="board-heading">What went well
+  <span (click)="addItem()"><i class="fa fa-plus-circle"></i></span>
+</div>
 <input [(ngModel)]="title">
-<button (click)="addItem()">Add</button>
 
 <div class="card-container card-board">
   <ng-container *ngFor="let lst of list">
-    <app-item-card [color]="'#ff9800'" [title]=lst></app-item-card>
+    <app-item-card [color]="'#FEC695'" [title]=lst></app-item-card>
   </ng-container>
 </div>
